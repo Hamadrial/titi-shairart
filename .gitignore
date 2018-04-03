@@ -1,0 +1,36 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+vendor/*
+!vendor/.gitkeep
+
+# Mac OS
+.DS_Store
+
+# Capistrano
+log/
+
+# Local by Flywheel
+sql/
+
+# Caching
+web/cache/
+
+
+# Temporarily force including pixels-toolbelt, should in future be added through composer?
+!web/app/mu-plugins/pixels-toolbelt
