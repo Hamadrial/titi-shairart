@@ -1,0 +1,18 @@
+{#
+ # Template for the site header.
+ #}
+
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="{{ site.url }}">{{ site.title }}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#site-header-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ _x('Toggle navigation', 'Accessibility label for toggling menu', 'titishairart') }}">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="site-header-nav">
+        {% include 'nav/nav.twig' with { nav_items: primary_navigation.get_items, classes: 'navbar-nav' } %}
+      </div>
+    </div>
+  </nav>
+</header>

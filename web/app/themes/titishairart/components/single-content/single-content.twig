@@ -1,0 +1,11 @@
+{#
+ # Template for a single content's content.
+ #
+ # @version 1.0.0
+ #
+ # @var post	The Timber Post object.
+ #}
+
+<section class="single-content single-content-{{post.post_type}}">
+  {{ post.get_paged_content }}
+</section>

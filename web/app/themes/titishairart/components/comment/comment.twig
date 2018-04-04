@@ -1,0 +1,25 @@
+{#
+ # Template for a comment thread.
+ #
+ # @version 1.0.0
+ #
+ # @var comment	The comment thread from WordPress
+ #}
+
+<article class="comment{{ comment.comment_type ? ' comment-'~comment.comment_type }}" id="comment-{{ comment.ID }}">
+	<h5 class="comment-author">{{ comment.author.name }}</h5>
+	<div class="comment-content">{{ comment.comment_content|wpautop }}</div>
+
+	<section class="comment-replies">
+		{% if comment.children %}
+			<h4>{{ __('Replies', 'titishairart') }}</h4>
+			<div class="comment-comments">
+				{% for child_comment in comment.children %}
+					{% include "comment/comment.twig" with {comment: child_comment} %}
+				{% endfor %}
+			</div>
+		{% endif %}
+
+		{% include "form/form-new-comment.twig" %}
+	</section>
+</article>

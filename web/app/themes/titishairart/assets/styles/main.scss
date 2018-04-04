@@ -1,0 +1,24 @@
+@import "common/variables";
+
+// Import npm dependencies
+@import "~bootstrap/scss/bootstrap";
+
+// *************
+// Common styles
+// *************
+@import "common/global";
+@import "common/tinymce";
+@import "common/wordpress";
+
+// ****************
+// Component styles
+// ****************
+@import "../../components/comment/comment";
+@import "../../components/form/form";
+@import "../../components/form/form-new-comment";
+@import "../../components/single-content/single-content";
+
+// ***********
+// View styles
+// ***********
+// @import "../../views/single/single";

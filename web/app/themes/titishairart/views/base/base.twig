@@ -1,0 +1,33 @@
+{#
+ # View template for the base document construction.
+ #}
+<!doctype html>
+<html class="no-js" {{ site.language_attributes }}>
+
+  {% block head %}
+    {% include 'site-head/site-head.twig' %}
+  {% endblock %}
+
+  <body class="{{ body_class }}">
+
+    {% block site_header %}
+      {% include 'site-header/site-header.twig' %}
+    {% endblock %}
+
+    <main role="main">
+      <div class="container">
+        {% block site_content %}
+          {{ __('Sorry, no content was found!', 'titishairart') }}
+        {% endblock %}
+      </div>
+    </main>
+
+    {% block site_footer %}
+      {% include 'site-footer/site-footer.twig' %}
+    {% endblock %}
+
+    {{ function('wp_footer') }}
+
+  </body>
+
+</html>

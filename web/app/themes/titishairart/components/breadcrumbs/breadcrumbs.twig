@@ -1,0 +1,27 @@
+{#
+ # Template for Bootstrap breadcrumbs.
+ #
+ # @see https://getbootstrap.com/docs/4.0/components/breadcrumb/
+ # @version 1.0.0
+ #
+ # @var breadcrumbs The array of breadcrumb items, containing url and label for each item.
+ #}
+
+{% if pattern_library %}
+  {% set breadcrumbs = [{url: '#', label: 'Home'}, {url: '#', label: 'Library'}, {url: '#', label: 'Data'}, {url: '', label: 'Item'}] %}
+{% endif %}
+
+<ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+  {% for item in breadcrumbs %}
+    <li class="breadcrumb-item{{ loop.last ? ' active' }}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      {% if not loop.last %}
+        <a href="{{ item.url }}" itemscope itemtype="http://schema.org/Thing" itemprop="item">
+      {% endif %}
+        <span itemprop="name">{{ item.label }}</span>
+      {% if not loop.last %}
+        </a>
+      {% endif %}
+      <meta itemprop="position" content="{{ loop.index }}" />
+    </li>
+  {% endfor %}
+</ol>
