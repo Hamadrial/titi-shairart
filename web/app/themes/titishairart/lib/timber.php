@@ -86,7 +86,7 @@ class PixelsSite extends TimberSite {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'titishairart')
+        'primary_navigation' => __('Primary Navigation', 'titishairart-theme')
     ]);
 
 		add_action( 'wp_enqueue_scripts', [$this, 'setup_scripts_styles'], 100 );

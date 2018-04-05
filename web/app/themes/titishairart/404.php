@@ -14,7 +14,7 @@ $templates = ['404/404.twig'];
 
 // Context
 $context = Timber::get_context();
-$context['title'] = __('Not found', 'titishairart');
+$context['title'] = __('Not found', 'titishairart-theme');
 
 // Render with Timber
 Timber::render( $templates, $context );

@@ -15,7 +15,7 @@ function setup_widget_areas() {
       'after_title'   => '</h3>'
   ];
   register_sidebar([
-      'name'          => __('Footer', 'titishairart'),
+      'name'          => __('Footer', 'titishairart-theme'),
       'id'            => 'site-footer-widgets'
   ] + $config);
 }
